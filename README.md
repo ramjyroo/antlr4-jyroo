@@ -1,4 +1,4 @@
-#ANTLR v4 Jyroo modifications for Android
+# ANTLR v4 Jyroo modifications for Android
 
 git clone https://github.com/antlr/antlr4.git
 cd antlr4
