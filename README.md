@@ -12,6 +12,39 @@ git remote add origin http://github.com/ramjyroo/antlr4-jyroo
 git push origin master
 ```
 
+# Android modifications are based on https://github.com/bkiers/antlr4android
+
+# ANTLR4 on Android
+
+This project is a small demo of how ANTLR4 can be built without Swing dependencies
+so that the ANTLR4 runtime library can be used in an Android app. The Android compatible
+library is localed in `app/libs` and can be built as follows:
+
+### 1. First clone ANTLR4: (covered already as part of creating separate repo)
+
+    git clone https://github.com/antlr/antlr4.git
+
+### 2. Checkout tag 4.3: (was not needed)
+
+    git checkout 4.3
+
+### 3. Remove the entire `gui` package:
+
+    rm -rf runtime/Java/src/org/antlr/v4/runtime/tree/gui
+
+### 4. Fix compiler error in the classes that contain `gui` classes:
+
+-   `runtime/Java/src/org/antlr/v4/runtime/RuleContext.java`
+-   `runtime/Java/src/org/antlr/v4/runtime/tree/Trees.java`
+
+### 5. Build the project by doing:
+
+    mvn clean install -DskipTests=true
+
+### 6. Copy the runtime library into the Android project:
+
+    cp runtime/Java/target/antlr4-runtime-4.3.jar /your/android/project/app/libs
+
 # ANTLR v4
 
 [![Build Travis-CI Status](https://travis-ci.org/antlr/antlr4.svg?branch=master)](https://travis-ci.org/antlr/antlr4) [![Build AppVeyor  Status](https://ci.appveyor.com/api/projects/status/5acpbx1pg7bhgh8v/branch/master?svg=true)](https://ci.appveyor.com/project/parrt/antlr4) [![Java 7+](https://img.shields.io/badge/java-7+-4c7e9f.svg)](http://java.oracle.com) [![License](https://img.shields.io/badge/license-BSD-blue.svg)](https://raw.githubusercontent.com/antlr/antlr4/master/LICENSE.txt)
