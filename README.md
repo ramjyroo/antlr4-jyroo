@@ -12,7 +12,7 @@ git remote add origin http://github.com/ramjyroo/antlr4-jyroo
 git push origin master
 ```
 
-# Android modifications are based on https://github.com/bkiers/antlr4android
+### Android modifications are based on https://github.com/bkiers/antlr4android
 
 # ANTLR4 on Android
 
