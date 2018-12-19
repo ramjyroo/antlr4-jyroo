@@ -1,14 +1,6 @@
 # ANTLR v4 Jyroo modifications for Android
 
-git clone https://github.com/antlr/antlr4.git
-cd antlr4
-git fetch && git fetch --tags
-git checkout master
-git remote rename origin upstream
-git remote add origin http://github.com/ramjyroo/antlr4-jyroo
-#git config --global --unset credential.helper
-#git config credential.helper store\n
-1681 2018-12-19 16:18 git push origin master
+`git clone https://github.com/antlr/antlr4.git cd antlr4 git fetch && git fetch --tags git checkout master git remote rename origin upstream git remote add origin http://github.com/ramjyroo/antlr4-jyroo #git config --global --unset credential.helper #git config credential.helper store\n git push origin master`
 
 # ANTLR v4
 
